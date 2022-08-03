@@ -16,6 +16,8 @@ for example:
 
 You can use this code in the **script tag** to apply this change.
 
+
+```
 document.addEventListener("keydown", function (event){
 
     if (event.ctrlKey){
@@ -31,6 +33,8 @@ document.addEventListener("keydown", function (event){
     }
 
 });
+``` 
+
 
 > You can disable mouse right click using javascript
 
@@ -38,23 +42,26 @@ By clicking right-click on the webpage, it will give you the option to view and 
 
 You can use this code in the **script tag** to apply this change.
 
+
+```
 document.addEventListener('contextmenu',   
      event => event.preventDefault()  
 );
+``` 
+
 
 > Is it enough?
 
 These two techniques are good for non-technical visitors or for some people who have just joined the Computer science field.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1654843006631/Hk_bufSdt.jpeg)
+![coding meme](https://cdn.hashnode.com/res/hashnode/image/upload/v1654843006631/Hk_bufSdt.jpeg)
 
-full-stack web developers
 
 What about Web developers (technical experts)?
 
 They can still view the source code of the web using chrome extension, HTML interceptor (BURP), or postman.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1654843007987/xBw4_vGP4.png)
+![postman](https://cdn.hashnode.com/res/hashnode/image/upload/v1654843007987/xBw4_vGP4.png)
 
 View source code in postman
 
