@@ -1,11 +1,5 @@
 ## Web3 js in practical (Part-I)
 
-#### API used for communication between frontend and smart contract
-
-#### learn basics about web3 js API
-
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1659520584700/4NxaCgLJD.jpeg)
-
 ### Background:
 
 Web3 js is an **Ethereum JavaScript API** that is used to interact with the Ethereum blockchain. It provides multiple methods that allow you to perform actions like sending Ethers from one account to another, creating smart contracts, interacting with smart contracts, and so much more.
@@ -27,7 +21,9 @@ Some prior knowledge is required related to:
 
 Node JS should be installed. To verify, type the command in CMD:
 
+```
 node -v
+```
 
 ### Setup environment:
 
@@ -37,11 +33,15 @@ There are multiple tools and options to create and set up blockchain but here ar
 
 create a folder, and open it with vs code or your editor. Type command in terminal:
 
+```
 npm init -y
+```
 
 *   ***Install web3 js library***
 
+```
 npm install web3
+```
 
 *   ***setup blockchain***
 
@@ -51,7 +51,7 @@ Download from here: [https://trufflesuite.com/ganache/](https://trufflesuite.com
 
 After installation, open Ganache (quick start):
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1659520586194/owOUqI_pM.png)
+![ganache](https://cdn.hashnode.com/res/hashnode/image/upload/v1659520586194/owOUqI_pM.png)
 
 ### Coding:
 
@@ -59,35 +59,42 @@ create a file “index.js” in the same folder and write some code.
 
 > Import library and initialize provider (ganache network)
 
+```
 const Web3 = require('web3');
 
 const web3 =   
 new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
+```
 
 use ganache network (RPC server) address in HttpProvider
 
 > List all ganache accounts:
 
+```
 web3.eth.getAccounts((*err*, *accounts*) => {
 
      console.log("Accounts:", *accounts*);
 
 })
+```
 
 > Get the balance of the account:
 
+```
 web3.eth.getBalance(web3.eth.accounts\[0\], (*err*, *balance*) => {
 
      console.log(web3.fromWei(*balance*, 'ether'));
 
 })
 
+```
 ***web3.eth.accounts\[0\]:*** *It refers to the first account.*
 
 ***web3.from Wei:*** *It converts balance from Wei to Ethers.*
 
 > Send ethers from one account to another account
 
+```
 web3.eth.sendTransaction(  
     { from: web3.eth.accounts\[0\],   
       to: web3.eth.accounts\[1\],   
@@ -97,13 +104,13 @@ web3.eth.sendTransaction(
           console.log(*transactionHash*);
 
 })
+```
 
 ***web3.toWei***: *It converts balance from Ethers to Wei.*
 
-#### here are the complete code files:
+### Code:
 
-[**web3/Part-I · billypentester/web3**  
-*follow billypentester and help him to grow community*github.com](https://github.com/billypentester/web3/tree/main/Part-I "https://github.com/billypentester/web3/tree/main/Part-I")[](https://github.com/billypentester/web3/tree/main/Part-I)
+%[https://github.com/billypentester/web3/tree/main/Part-I]
 
 ### Conclusion:
 
@@ -115,12 +122,3 @@ Wait!!! Where’s the smart contract ?!
 
 In web3 js (Part-II), I’ll discuss, how to interact with smart contracts.
 
-here’s the link to web3 js (Part-II):
-
-[**Web3 js in practical (Part-II)**  
-*learn how to interact with smart contracts using web3 js API*billypentester.medium.com](https://billypentester.medium.com/web3-js-in-practical-part-ii-937b035a8c0c "https://billypentester.medium.com/web3-js-in-practical-part-ii-937b035a8c0c")[](https://billypentester.medium.com/web3-js-in-practical-part-ii-937b035a8c0c)
-
-here’s the link to web3 js (Part-III):
-
-[**Web3 js in practical (Part-III)**  
-*learn how to compile and deploy contracts using web3 js API*billypentester.medium.com](https://billypentester.medium.com/web3-js-in-practical-part-iii-6ed2080f84b7 "https://billypentester.medium.com/web3-js-in-practical-part-iii-6ed2080f84b7")[](https://billypentester.medium.com/web3-js-in-practical-part-iii-6ed2080f84b7)
