@@ -1,9 +1,5 @@
 ## How to hide the source code of an HTML web page?
 
-#### Beginner developers used to think that they could hide the HTML code of their web page by restricting visitors, but this is not the case.
-
-Photo by [Valery Sysoev](https://unsplash.com/@valerysysoev?utm_source=medium&utm_medium=referral) on [Unsplash](https://unsplash.com?utm_source=medium&utm_medium=referral)
-
 Here are some techniques if you want to restrict your visitor to view or scrap your HTML code in inspect element:
 
 > You can disable Ctrl and F12 keys using javascript
